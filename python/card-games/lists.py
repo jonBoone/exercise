@@ -56,7 +56,14 @@ def approx_average_is_average(hand):
     `true average`?
     """
 
-    pass
+    hand_average = card_average(hand)
+    sample_average = (hand[0] + hand[-1]) / 2
+    median = hand[round(len(hand) / 2)]
+
+    if sample_average == hand_average or median == hand_average:
+        return True
+
+    return False
 
 
 def average_even_is_average_odd(hand):
