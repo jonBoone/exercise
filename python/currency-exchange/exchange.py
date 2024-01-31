@@ -72,8 +72,8 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     :param denomination: int - the value of a single bill.
     :return: int - maximum value you can get.
     """
-    percent = float(spread / 100)
+    percent = spread / 100
     adjusted_rate = exchange_rate * (1 + percent)
     target_value = exchange_money(budget, adjusted_rate)
     currentcy_units = get_number_of_bills(target_value, denomination)
-    return currentcy_units * denomination
+    return get_value_of_bills(currentcy_units, denomination)
