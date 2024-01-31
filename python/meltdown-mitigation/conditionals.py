@@ -62,7 +62,20 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
 
     1. 'LOW' -> `temperature * neutrons per second` < 90% of `threshold`
     2. 'NORMAL' -> `temperature * neutrons per second` +/- 10% of `threshold`
-    3. 'DANGER' -> `temperature * neutrons per second` is not in the above-stated ranges
+    3. 'DANGER' -> `temperature * neutrons per second` outside the above ranges
     """
+    critical_mass = float(temperature * neutrons_produced_per_second)
+    normal_low_end = threshold * 0.90
+    normal_high_end = threshold * 1.10
 
-    pass
+    low_status: bool = critical_mass < threshold * 0.90
+    normal_status: bool = critical_mass >= normal_low_end and \
+        critical_mass <= normal_high_end
+
+    if low_status:
+        return 'LOW'
+
+    if normal_status:
+        return 'NORMAL'
+
+    return 'DANGER'
