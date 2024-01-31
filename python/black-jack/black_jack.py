@@ -39,7 +39,16 @@ def higher_card(card_one, card_two):
     3.  '2' - '10' = numerical value.
     """
 
-    pass
+    value_one = value_of_card(card_one)
+    value_two = value_of_card(card_two)
+
+    if value_one == value_two:
+        return card_one, card_two
+
+    if value_one < value_two:
+        return card_two
+
+    return card_one
 
 
 def value_of_ace(card_one, card_two):
