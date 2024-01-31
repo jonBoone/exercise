@@ -74,9 +74,9 @@ def average_even_is_average_odd(hand):
     :return: bool - are even and odd averages equal?
     """
 
-    average_evens = card_average([card for card, index in enumerate(hand) 
+    average_evens = card_average([card for index, card in enumerate(hand) 
                                   if index % 2 == 0])
-    average_odds = card_average([card for card, index in enumerate(hand) 
+    average_odds = card_average([card for index, card in enumerate(hand) 
                                  if index % 2 != 0])
 
     return average_evens == average_odds
