@@ -10,7 +10,7 @@ def add_prefix(prefix, word) -> str:
     :param word: str - the root word.
     :return: str - prefix + root word.
     """
-    return prefix.join(word)
+    return prefix + word
 
 
 def add_prefix_un(word):
@@ -39,7 +39,15 @@ def make_word_groups(vocab_words):
     produces the following string: 'en :: enclose :: enjoy :: enlighten'.
     """
 
-    pass
+    seperator = " :: "
+    prefix = vocab_words[0]
+    words = vocab_words[1:]
+    result = prefix
+
+    for word in words:
+        result = result + seperator + add_prefix(prefix, word)
+
+    return result
 
 
 def remove_suffix_ness(word):
