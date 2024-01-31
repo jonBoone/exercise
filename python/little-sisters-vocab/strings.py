@@ -1,7 +1,7 @@
 """Functions for creating, transforming, and adding prefixes to strings."""
 
 UN_PREFIX = "un"
-
+NESS_SUFFIX = "ness"
 
 def add_prefix(prefix, word) -> str:
     """Take the given word and add the prefix to it.
@@ -50,6 +50,21 @@ def make_word_groups(vocab_words):
     return result
 
 
+def remove_suffix(suffix, word):
+    """Remove suffix from the word while keeping spelling in mind.
+
+    :param suffix: str - the suffix to remove.
+    :param word: str - the target from which to remove the suffix.
+    :return: str - word with removed suffix and adjusted spelling.
+    """
+
+    root = word[:-(len(suffix))]
+    if root[-1] == "i":
+        root[-1] = "y"
+
+    return root
+
+
 def remove_suffix_ness(word):
     """Remove the suffix from the word while keeping spelling in mind.
 
@@ -59,7 +74,7 @@ def remove_suffix_ness(word):
     For example: "heaviness" becomes "heavy", but "sadness" becomes "sad".
     """
 
-    pass
+    return remove_suffix(NESS_SUFFIX, word)
 
 
 def adjective_to_verb(sentence, index):
