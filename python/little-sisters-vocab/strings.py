@@ -1,5 +1,6 @@
 """Functions for creating, transforming, and adding prefixes to strings."""
 
+UN_PREFIX = "un"
 
 def add_prefix_un(word):
     """Take the given word and add the 'un' prefix.
@@ -8,7 +9,7 @@ def add_prefix_un(word):
     :return: str - of root word prepended with 'un'.
     """
 
-    pass
+    return UN_PREFIX.join(word)
 
 
 def make_word_groups(vocab_words):
