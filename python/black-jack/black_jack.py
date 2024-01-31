@@ -116,7 +116,14 @@ def can_split_pairs(card_one, card_two):
       of the same value).
     """
 
-    pass
+    # can split a 'Q' and a 'K'
+    if card_one in ('Q', 'K') and card_two in ('Q', 'K'):
+        return True
+
+    if value_of_card(card_one) == value_of_card(card_two):
+        return True
+
+    return False
 
 
 def can_double_down(card_one, card_two):
