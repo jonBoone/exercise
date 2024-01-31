@@ -107,6 +107,8 @@ def is_blackjack(card_one, card_two):
             return True
         return False
 
+    return False
+
 
 def can_split_pairs(card_one, card_two):
     """Determine if a player can split their hand into two hands.
