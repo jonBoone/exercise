@@ -75,5 +75,5 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     percent = spread / 100
     adjusted_rate = exchange_rate * (1 + percent)
     target_value = exchange_money(budget, adjusted_rate)
-    currentcy_units = get_number_of_bills(target_value, denomination)
-    return get_value_of_bills(currentcy_units, denomination)
+    currency_units = get_number_of_bills(target_value, denomination)
+    return get_value_of_bills(currency_units, denomination)
