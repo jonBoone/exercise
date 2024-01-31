@@ -23,9 +23,9 @@ def is_criticality_balanced(temperature, neutrons_emitted):
 def reactor_efficiency(voltage, current, theoretical_max_power):
     """Assess reactor efficiency zone.
 
-    :param voltage: int or float - voltage value.
-    :param current: int or float - current value.
-    :param theoretical_max_power: int or float - power that corresponds to a 100% efficiency.
+    :param voltage: int or float - voltage.
+    :param current: int or float - current.
+    :param theoretical_max_power: int or float - power when efficiency is 100%.
     :return: str - one of ('green', 'orange', 'red', or 'black').
 
     Efficiency can be grouped into 4 bands:
@@ -39,8 +39,17 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
     (generated power/ theoretical max power)*100
     where generated power = voltage * current
     """
+    generated_power = voltage * current
+    efficiency = generated_power / theoretical_max_power * 100
 
-    pass
+    if efficiency >= 80.0:
+        return 'green'
+    elif efficiency >= 60.0 and efficiency < 80.0:
+        return 'orange'
+    elif efficiency >= 30.0 and efficiency < 60.0:
+        return 'red'
+    else:
+        return 'black'
 
 
 def fail_safe(temperature, neutrons_produced_per_second, threshold):
