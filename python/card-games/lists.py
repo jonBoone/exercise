@@ -60,7 +60,7 @@ def approx_average_is_average(hand):
     sample_average = (hand[0] + hand[-1]) / 2
     median = hand[round(len(hand) / 2)]
 
-    if sample_average == hand_average or median == hand_average:
+    if hand_average in (sample_average, median):
         return True
 
     return False
