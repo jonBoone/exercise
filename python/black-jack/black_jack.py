@@ -4,6 +4,8 @@ How to play blackjack:    https://bicyclecards.com/how-to-play/blackjack/
 "Standard" playing cards: https://en.wikipedia.org/wiki/Standard_52-card_deck
 """
 
+FACE_CARDS = ('J', 'Q', 'K')
+
 
 def value_of_card(card):
     """Determine the scoring value of a card.
@@ -16,9 +18,7 @@ def value_of_card(card):
     3.  '2' - '10' = numerical value.
     """
 
-    face_cards = ('J', 'Q', 'K')
-
-    if card in face_cards:
+    if card in FACE_CARDS:
         return 10
 
     if card == 'A':
