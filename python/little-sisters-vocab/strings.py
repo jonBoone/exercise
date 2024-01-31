@@ -59,8 +59,9 @@ def remove_suffix(suffix, word):
     """
 
     root = word[:-(len(suffix))]
+
     if root[-1] == "i":
-        root[-1] = "y"
+        return root[:-1] + "y"
 
     return root
 
