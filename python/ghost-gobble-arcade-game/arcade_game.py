@@ -20,7 +20,7 @@ def score(touching_power_pellet, touching_dot):
     :return: bool - has the player scored or not?
     """
 
-    return touching_power_pellet and touching_dot
+    return touching_power_pellet or touching_dot
 
 
 def lose(power_pellet_active, touching_ghost):
