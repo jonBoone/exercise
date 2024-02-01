@@ -56,6 +56,10 @@ def steps(number: int) -> int:
     """
 
     step = 0
+
+    if number < 1:
+        raise ValueError('Only positive integers are allowed')
+
     if number == 1:
         return step
 
