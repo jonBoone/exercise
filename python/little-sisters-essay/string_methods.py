@@ -18,8 +18,7 @@ def check_sentence_ending(sentence):
     :return: bool - return True if correctly punctuated, False otherwise.
     """
 
-    return sentence[-1] == '.'
-
+    return sentence.endswith('.')
 
 def clean_up_spacing(sentence):
     """Remove any whitespace at the start and end of the sentence.
