@@ -25,7 +25,12 @@ def find_my_friend(queue, friend_name):
     :return: int - index at which the friends name was found.
     """
 
-    pass
+    friend_at = None
+    for index, person_name in enumerate(queue):
+        if person_name == friend_name:
+            friend_at = index
+
+    return friend_at
 
 
 def add_me_with_my_friends(queue, index, person_name):
