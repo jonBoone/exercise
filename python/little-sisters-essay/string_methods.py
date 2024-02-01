@@ -41,7 +41,7 @@ def replace_word_choice(sentence, old_word, new_word):
     """
 
     # Assuming setence parameter contains only a single sentence.
-    new_sentence = ""
+    new_sentence = ''
     ending_punctation = sentence[-1]
 
     # Ensure that the replacement happens only on entire words,
