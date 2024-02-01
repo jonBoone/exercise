@@ -14,6 +14,20 @@ def is_question(input):
     return False
 
 
+def is_yelling(input):
+    """Determine if the input is being yelled.
+
+    :param input: str - the input to analyze.
+    :return: bool - True if input is in ALL_CAPS, False otherwise.
+    """
+
+    for letter in input.split():
+        if not letter.isupper():
+            return False
+
+    return True
+
+
 def response(hey_bob):
     """Return Bob's response to the input.
 
@@ -23,5 +37,8 @@ def response(hey_bob):
 
     if is_question(hey_bob):
         return "Sure."
+
+    if is_yelling(hey_bob):
+        return "Whoa, chill out!"
 
     return "Whatever."
