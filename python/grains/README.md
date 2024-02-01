@@ -54,4 +54,4 @@ raise ValueError("square must be between 1 and 64")
 
 ### Based on
 
-The CodeRanch Cattle Drive, Assignment 6 - https://coderanch.com/wiki/718824/Grains
+The CodeRanch Cattle Drive, Assignment 6 - <https://coderanch.com/wiki/718824/Grains>
