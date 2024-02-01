@@ -82,7 +82,20 @@ def equilateral(sides):
 
 
 def isosceles(sides):
-    pass
+    """Validate isosceles triangle properties
+
+    :param sides: list - the lengths of the sides
+    :return: bool - True if 2+ sides are the same length, False otherwise
+    """
+
+    a = sides[0]
+    b = sides[1]
+    c = side[2]
+
+    if triangle(sides) and (a == b or b == c or a == c):
+        return True
+
+    return False
 
 
 def scalene(sides):
