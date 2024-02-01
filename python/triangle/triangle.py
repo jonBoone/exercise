@@ -28,6 +28,9 @@ def equilateral(sides):
     :return: bool - return True if all sides are equal; otherwise False
     """
 
+    if not non_zero_sides(sides):
+        return False
+
     if sides[0] == sides[1] == sides[2]:
         return True
 
