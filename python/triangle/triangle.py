@@ -42,6 +42,19 @@ def non_zero_sides(sides):
     return True
 
 
+def triangle(sides):
+    """Validate we have an actual triangle
+
+    :param sides: list - the lengths of the three sides
+    :return: bool - return True if an actual triange, otherwise False
+    """
+
+    if triangle_inequality(sides) and non_zero_sides(sides):
+        return True
+
+    return False
+
+
 def equilateral(sides):
     """Return True if triangle is equilateral; otheriwse False
 
@@ -49,7 +62,7 @@ def equilateral(sides):
     :return: bool - return True if all sides are equal; otherwise False
     """
 
-    if not non_zero_sides(sides):
+    if not triangle(sides):
         return False
 
     if sides[0] == sides[1] == sides[2]:
