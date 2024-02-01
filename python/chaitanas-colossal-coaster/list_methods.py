@@ -2,7 +2,7 @@
 
 
 def add_me_to_the_queue(express_queue, normal_queue, ticket_type, person_name):
-    """Add a person to the 'express' or 'normal' queue depending on the ticket number.
+    """Add person to the 'express' or 'normal' queue based on ticket number.
 
     :param express_queue: list - names in the Fast-track queue.
     :param normal_queue: list - names in the normal queue.
@@ -60,7 +60,7 @@ def how_many_namefellows(queue, person_name):
 
 
 def remove_the_last_person(queue):
-    """Remove the person in the last index from the queue and return their name.
+    """Remove person in the last index from the queue, returning their name.
 
     :param queue: list - names in the queue.
     :return: str - name that has been removed from the end of the queue.
