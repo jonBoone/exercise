@@ -19,7 +19,7 @@ def check_sentence_ending(sentence):
     :return: bool - return True if correctly punctuated, False otherwise.
     """
 
-    pass
+    return sentence[-1] == '.'
 
 
 def clean_up_spacing(sentence):
