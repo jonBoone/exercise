@@ -55,6 +55,19 @@ def triangle(sides):
     return False
 
 
+def same_length(sides):
+    """Verify sides are the same length
+
+    :param sides: list - the lengths of the three sides
+    :return: bool - return True if sides are all equal, otherwise False
+    """
+
+    if sides[0] == sides[1] == sides[2]:
+        return True
+
+    return False
+
+
 def equilateral(sides):
     """Return True if triangle is equilateral; otheriwse False
 
@@ -62,10 +75,7 @@ def equilateral(sides):
     :return: bool - return True if all sides are equal; otherwise False
     """
 
-    if not triangle(sides):
-        return False
-
-    if sides[0] == sides[1] == sides[2]:
+    if triangle(sides) and same_length(sides):
         return True
 
     return False
