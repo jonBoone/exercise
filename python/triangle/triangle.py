@@ -2,6 +2,27 @@
 scalene)."""
 
 
+def triangle_inequality(sides):
+    """Validate triangle inequalities hold for sides
+
+    :param sides: list - the lengths of the three sides
+    :return: bool - return True if all inequalities hold, otherwise False
+    """
+
+    (a, b, c) = sides
+
+    if a + b < c:
+        return False
+
+    if b + c < a:
+        return False
+
+    if a + c < b:
+        return False
+
+    return True
+
+
 def non_zero_sides(sides):
     """Validate all three sides are non-zero
 
