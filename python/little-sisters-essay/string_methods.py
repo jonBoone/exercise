@@ -2,7 +2,7 @@
 
 
 def capitalize_title(title):
-    """Convert the first letter of each word in the title to uppercase if needed.
+    """Ensure the first letter of each word in the title is uppercase.
 
     :param title: str - title string that needs title casing.
     :return: str - title string in title case (first letters capitalized).
@@ -15,17 +15,17 @@ def check_sentence_ending(sentence):
     """Check the ending of the sentence to verify that a period is present.
 
     :param sentence: str - a sentence to check.
-    :return: bool - return True if punctuated correctly with period, False otherwise.
+    :return: bool - return True if correctly punctuated, False otherwise.
     """
 
     pass
 
 
 def clean_up_spacing(sentence):
-    """Verify that there isn't any whitespace at the start and end of the sentence.
+    """Remove any whitespace at the start and end of the sentence.
 
-    :param sentence: str - a sentence to clean of leading and trailing space characters.
-    :return: str - a sentence that has been cleaned of leading and trailing space characters.
+    :param sentence: str - a sentence from which to clean up whitespace.
+    :return: str - a cleaned up sentence with no leading/trailing whitespace.
     """
 
     pass
