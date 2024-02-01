@@ -2,6 +2,25 @@
 scalene)."""
 
 
+def non_zero_sides(sides):
+    """Validate all three sides are non-zero
+
+    :param sides: list - the lengths of the three sides
+    :return: bool - if all sides > 0 return True, otherwise False
+    """
+
+    if sides[0] <= 0:
+        return False
+
+    if sides[1] <= 0:
+        return False
+
+    if sides[2] <= 0:
+        return False
+
+    return True
+
+
 def equilateral(sides):
     """Return True if triangle is equilateral; otheriwse False
 
