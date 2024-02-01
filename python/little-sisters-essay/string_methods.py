@@ -40,4 +40,25 @@ def replace_word_choice(sentence, old_word, new_word):
     :return: str - input sentence with new words in place of old words.
     """
 
-    return sentence.replace(old_word, new_word)
+    # Assuming setence parameter contains only a single sentence.
+    new_sentence = ""
+    ending_punctation = sentence[-1]
+
+    # Ensure that the replacement happens only on entire words,
+    # and not on substrings of words that happen to match.
+    words = sentence.split()
+    words = [word.rstrip(ending_punctation) for word in words]
+    final_word = len(words) - 1
+
+    for index, word in enumerate(words):
+        if word == old_word:
+            new_sentence += new_word
+        else:
+            new_sentence += word
+
+        if index == final_word:
+            new_sentence += ending_punctation
+        else:
+            new_sentence += ' '
+
+    return new_sentence
