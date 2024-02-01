@@ -5,7 +5,7 @@ scalene)."""
 def equilateral(sides):
     """Return True if triangle is equilateral; otheriwse False
 
-    :param sides: tuple of ints representing the lenght of the three sides
+    :param sides: list -  the lengths of the three sides
     :return: bool - return True if all sides are equal; otherwise False
     """
 
