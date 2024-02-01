@@ -67,4 +67,4 @@ raise ValueError("Only positive integers are allowed")
 
 ### Based on
 
-An unsolved problem in mathematics named after mathematician Lothar Collatz - https://en.wikipedia.org/wiki/3x_%2B_1_problem
+An unsolved problem in mathematics named after mathematician Lothar Collatz - <https://en.wikipedia.org/wiki/3x_%2B_1_problem>
