@@ -90,7 +90,7 @@ def isosceles(sides):
 
     a = sides[0]
     b = sides[1]
-    c = side[2]
+    c = sides[2]
 
     if triangle(sides) and (a == b or b == c or a == c):
         return True
@@ -99,4 +99,17 @@ def isosceles(sides):
 
 
 def scalene(sides):
-    pass
+    """Validate scalene triangle properties
+
+    :param sides: list - the lengths of the sides
+    :return: bool - True if all sides are of different length, False otherwise
+    """
+
+    a = sides[0]
+    b = sides[1]
+    c = sides[2]
+
+    if triangle(sides) and a != b and b != c and a != c:
+        return True
+
+    return False
