@@ -20,6 +20,7 @@ def check_sentence_ending(sentence):
 
     return sentence.endswith('.')
 
+
 def clean_up_spacing(sentence):
     """Remove any whitespace at the start and end of the sentence.
 
@@ -27,7 +28,7 @@ def clean_up_spacing(sentence):
     :return: str - a cleaned up sentence with no leading/trailing whitespace.
     """
 
-    pass
+    return sentence.strip()
 
 
 def replace_word_choice(sentence, old_word, new_word):
