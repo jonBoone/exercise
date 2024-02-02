@@ -2,7 +2,7 @@
 
 
 vowel_sounds = ('xr', 'yt')
-vowels = ('a','e','i','o','u')
+vowels = ('a', 'e', 'i', 'o', 'u')
 
 
 def add_ay_to_end(word):
