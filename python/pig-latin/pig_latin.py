@@ -51,6 +51,8 @@ def relocate_beginning_consonants(word):
     for component in word:
         if component not in vowels:
             beginning_consonant_cluster += component
+        elif beginning_consonant_cluster[-1] == 'q' and component == 'u':
+            beginning_consonant_cluster += component
         else:
             break
 
