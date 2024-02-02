@@ -44,4 +44,4 @@ Read more about [Pig Latin on Wikipedia][pig-latin].
 
 ### Based on
 
-The Pig Latin exercise at Test First Teaching by Ultrasaurus - https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/
+The Pig Latin exercise at Test First Teaching by Ultrasaurus - <https://github.com/ultrasaurus/test-first-teaching/blob/master/learn_ruby/pig_latin/>
