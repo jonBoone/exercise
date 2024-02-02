@@ -14,6 +14,19 @@ def is_question(input):
     return False
 
 
+def is_silence(input):
+    """Determine if the input is silence.
+
+    :param input: str - the input to analyze.
+    :return: bool - True if empty string, False otherwise.
+    """
+
+    if input == '':
+        return True
+
+    return False
+
+
 def is_yelling(input):
     """Determine if the input is being yelled.
 
@@ -34,6 +47,11 @@ def response(hey_bob):
     :param hey_bob: str - the input to which Bob must respond.
     :return: str - Bob's response
     """
+
+    # stripping the whitespace converges all relevant silence to ""
+    hey_bob = hey_bob.strip()
+    if is_silence(hey_bob):
+        return "Fine. Be that way!"
 
     if is_question(hey_bob):
         return "Sure."
