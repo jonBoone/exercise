@@ -70,11 +70,13 @@ def translate(text):
     text = text.strip()
     text = text.split()
 
-    for word in text:
+    for index, word in enumerate(text):
         if begins_with_vowel_sound(word):
             translated_text += add_ay_to_end(word)
         if not begins_with_vowel_sound(word):
             translated_word = relocate_beginning_consonants(word)
             translated_text += add_ay_to_end(translated_word)
+        if index != len(text) - 1:
+            translated_text += ' '
 
     return translated_text
