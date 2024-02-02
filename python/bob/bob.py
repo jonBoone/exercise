@@ -34,11 +34,15 @@ def is_yelling(message):
     :return: bool - True if input is in ALL_CAPS, False otherwise.
     """
 
-    for letter in message.split():
-        if not letter.isupper():
-            return False
+    contains_alpha = False
 
-    return True
+    for component in message:
+        if component.isalpha():
+            contains_alpha = True
+            if not component.isupper():
+                return False
+
+    return contains_alpha
 
 
 def response(hey_bob):
