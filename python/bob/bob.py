@@ -52,11 +52,19 @@ def response(hey_bob):
     hey_bob = hey_bob.strip()
     if is_silence(hey_bob):
         return "Fine. Be that way!"
+    
+     # determine if the input is a question and/or is being yelled
+    question = is_question(hey_bob)
+    yelled = is_yelling(hey_bob)
 
-    if is_question(hey_bob):
+    if question and yelled:
+        return "Calm down, I know what I'm doing!"
+
+    if question:
         return "Sure."
 
-    if is_yelling(hey_bob):
+    if yelled:
         return "Whoa, chill out!"
+
 
     return "Whatever."
