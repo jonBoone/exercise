@@ -37,6 +37,7 @@ Most languages provide operators or functions for one (or both) of these.
 This exercise is best solved with Python's `%` ([modulo][modulo]) operator, which returns the remainder of positive integer division.
 It has a method equivalent, `operator.mod()` in the [operator module][operator-mod].
 
+
 Python also offers additional 'remainder' methods in the [math module][math-module].
 [`math.fmod()`][fmod] behaves like `%`, but operates on floats.
 [`math.remainder()`][remainder] implements a "step closest to zero" algorithm for the remainder of division.
@@ -71,4 +72,4 @@ The built-in function [`divmod()`][divmod] will also give a remainder than match
 
 ### Based on
 
-A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. - <https://en.wikipedia.org/wiki/Fizz_buzz>
+A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. - https://en.wikipedia.org/wiki/Fizz_buzz
