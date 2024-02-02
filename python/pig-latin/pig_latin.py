@@ -9,7 +9,7 @@ def begins_with_vowel_sound(word):
     """Validate the given English word begins with a vowel sound.
 
     :param word: str - the English word to check
-    :result: str - True, when word begins with a vowel cluster, False otherwise
+    :result: bool - True, when word begins with a vowel cluster, else False
     """
 
     if word[:2] in vowel_sounds:
