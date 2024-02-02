@@ -39,6 +39,25 @@ def begins_with_vowel_sound(word):
     return False
 
 
+def relocate_beginning_consonants(word):
+    """Move the beginning consonts to the end of the word.
+
+    :param word: str - the English word to modify.
+    :result: str - the modified English word.
+    """
+
+    beginning_consonant_cluster = ''
+
+    for component in word:
+        if component not in vowels:
+            beginning_consonant_cluster += component
+        else:
+            break
+
+    return word[len(beginning_consonant_cluster):] + \
+        word[:len(beginning_consonant_cluster)]
+
+
 def translate(text):
     """Translate a provided English text into Pig Latin.
 
@@ -54,5 +73,8 @@ def translate(text):
     for word in text:
         if begins_with_vowel_sound(word):
             translated_text += add_ay_to_end(word)
+        if not begins_with_vowel_sound(word):
+            translated_word = relocate_beginning_consonants(word)
+            translated_text += add_ay_to_end(translated_word)
 
     return translated_text
