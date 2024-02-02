@@ -3,6 +3,7 @@
 
 vowel_sounds = ('xr', 'yt')
 vowels = ('a', 'e', 'i', 'o', 'u')
+consonant_cluster_vowels = ('u', 'y')
 
 
 def add_ay_to_end(word):
@@ -51,8 +52,17 @@ def relocate_beginning_consonants(word):
     for component in word:
         if component not in vowels:
             beginning_consonant_cluster += component
-        elif beginning_consonant_cluster[-1] == 'q' and component == 'u':
-            beginning_consonant_cluster += component
+        elif component in consonant_cluster_vowels:
+            match component:
+                case 'y':
+                    beginning_consonant_cluster += component
+                case 'u':
+                    print(f'word == {word}')
+                    print(f'beginning_consonant_cluster[-1] = {beginning_consonant_cluster[-1]}')
+                    if beginning_consonant_cluster[-1] == 'q':
+                        beginning_consonant_cluster += component
+                    else:
+                        break
         else:
             break
 
