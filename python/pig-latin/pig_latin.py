@@ -5,6 +5,16 @@ vowel_sounds = ('xr', 'yt')
 vowels = ('a','e','i','o','u')
 
 
+def add_ay_to_end(word):
+    """Add 'ay' sound to the end of the word.
+
+    :param text: str - word beginning with a vowel sound.
+    :return: str - the word with an 'ay' suffix added
+    """
+
+    return word + 'ay'
+
+
 def begins_with_vowel_sound(word):
     """Validate the given English word begins with a vowel sound.
 
@@ -27,16 +37,6 @@ def begins_with_vowel_sound(word):
         return True
 
     return False
-
-
-def add_ay_to_end(word):
-    """Add 'ay' sound to the end of the word.
-
-    :param text: str - word beginning with a vowel sound.
-    :return: str - the word with an 'ay' suffix added
-    """
-
-    return word + 'ay'
 
 
 def translate(text):
