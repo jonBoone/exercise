@@ -45,4 +45,14 @@ def translate(text):
     :param text: str - the source English phrase.
     :return: str - the translated Pig Latin phrase.
     """
-    pass
+
+    translated_text = ''
+
+    text = text.strip()
+    text = text.split()
+
+    for word in text:
+        if begins_with_vowel_sound(word):
+            translated_text += add_ay_to_end(word)
+
+    return translated_text
