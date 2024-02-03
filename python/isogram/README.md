@@ -41,4 +41,4 @@ The word _isograms_, however, is not an isogram, because the s repeats.
 
 ### Based on
 
-Wikipedia - https://en.wikipedia.org/wiki/Isogram
+Wikipedia - <https://en.wikipedia.org/wiki/Isogram>
