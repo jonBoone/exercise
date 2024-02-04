@@ -1,3 +1,4 @@
+"""Pangram validation functionality"""
 def is_pangram(sentence:str):
     """validate that sentence is a pangram of the English letters
 
