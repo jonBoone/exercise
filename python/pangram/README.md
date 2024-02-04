@@ -53,4 +53,4 @@ For this exercise, a sentence is a pangram if it contains each of the 26 letters
 
 ### Based on
 
-Wikipedia - https://en.wikipedia.org/wiki/Pangram
+Wikipedia - <https://en.wikipedia.org/wiki/Pangram>
