@@ -45,6 +45,15 @@ def process_letter(letter: str, cipher: dict) -> str:
 
 
 def rotate(text: str, key: int) -> str:
+    """Perform the rotation cipher on the input text.
+
+    :param text: The source text.
+    :type text: str
+    :param key: The number of positions to rotate the alphabet.
+    :type key: int
+    :return: THe rotated text.
+    :rtype: str
+    """
     cipher = generate_cipher(key)
     result_text: list[str] = ''
 
