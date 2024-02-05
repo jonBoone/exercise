@@ -23,7 +23,16 @@ def compare_lists(list_one: str, list_two: str,
     return False
 
 def sublist(list_one:str , list_two: str) -> int:
+    """Determine the relationship (SUBLIST, SUPERLIST, EQUAL, UNEQUAL)
+    between two provided lists
 
+    :param list_one: the first list to compare
+    :type list_one: str
+    :param list_two: the second list to compare
+    :type list_two: str
+    :return: return the relationship of the first list to the second list
+    :rtype: int
+    """
     list_one_length = len(list_one)
     list_two_length = len(list_two)
 
