@@ -20,7 +20,7 @@ UNEQUAL: int = 3
 
 def compare_lists(list_one: str, list_two: str, 
                   comparison_length: int) -> bool:
-    pass
+    return False
 
 def sublist(list_one:str , list_two: str) -> int:
 
