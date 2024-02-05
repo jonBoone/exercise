@@ -32,7 +32,12 @@ def compare_lists(list_one: str, list_two: str,
     :return: True if the first comparison_length elements in both lists are the same, False otherwise
     :rtype: bool
     """
-    return False
+
+    for index, value in enumerate(list_one):
+        if value != list_two[index]:
+            return False
+        
+    return True
 
 def sublist(list_one:str , list_two: str) -> int:
     """Determine the relationship (SUBLIST, SUPERLIST, EQUAL, UNEQUAL)
