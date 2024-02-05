@@ -18,28 +18,23 @@ EQUAL: int = 2
 UNEQUAL: int = 3
 
 
-def compare_lists(list_one: str, list_two: str, 
-                  comparison_length: int) -> bool:
-    """Given two lists, determine if they are identical across a given
-    number of elements
+def is_sublist(first_list: str, second_list: str) -> bool:
+    """determine if second_list is a sublist of first_list
 
-    :param list_one: the first list to compare
-    :type list_one: str
-    :param list_two: the second list to compare
-    :type list_two: str
-    :param comparison_length: the number of elements that nmust be equal
-    :type comparison_length: int
-    :return: True if the first comparison_length elements in both lists are the same, False otherwise
+    :param first_list: the reference list
+    :type first_list: str
+    :param second_list: the list to campare to the reference list
+    :type second_list: str
+    :return: True, if second_list is a sublist of first_list; False, otherwise
     :rtype: bool
     """
+    for i in range(len(first_list) - len(second_list) + 1):
+        if not second_list or second_list == first_list[i : i + len(second_list)]:
+            return True
+    return False
 
-    for index, value in enumerate(list_one):
-        if value != list_two[index]:
-            return False
-        
-    return True
 
-def sublist(list_one:str , list_two: str) -> int:
+def sublist(list_one: str , list_two: str) -> int:
     """Determine the relationship (SUBLIST, SUPERLIST, EQUAL, UNEQUAL)
     between two provided lists
 
@@ -53,20 +48,11 @@ def sublist(list_one:str , list_two: str) -> int:
     list_one_length = len(list_one)
     list_two_length = len(list_two)
 
-    if list_one_length == list_two_length and \
-    compare_lists(list_one, list_two, list_one_length):
+    if list_one == list_two:
         return EQUAL
-    elif list_one_length < list_two_length:
-        for index in range(list_two_length - list_one_length + 1):
-            if compare_lists(list_one, 
-                             list_two[index:index + list_one_length], 
-                             list_one_length):
-                return SUBLIST
-    else:
-        for index in range(list_one_length - list_two_length + 1):
-            if compare_lists(list_one[index:index + list_two_length],
-                             list_two,
-                             list_two_length):
-                return SUPERLIST
+    elif is_sublist(list_one, list_two):
+        return SUPERLIST
+    elif is_sublist(list_two, list_one):
+        return SUBLIST
 
     return UNEQUAL
