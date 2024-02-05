@@ -18,19 +18,29 @@ EQUAL: int = 2
 UNEQUAL: int = 3
 
 
-def sublist(list_one, list_two) -> int:
+def compare_lists(list_one: str, list_two: str, 
+                  comparison_length: int) -> bool:
+    pass
+
+def sublist(list_one:str , list_two: str) -> int:
 
     list_one_length = len(list_one)
     list_two_length = len(list_two)
 
-    if list_one_length == list_two_length:
-        # either equal
-        pass
+    if list_one_length == list_two_length and \
+    compare_lists(list_one, list_two, list_one_length):
+        return EQUAL
     elif list_one_length < list_two_length:
-        # sublist
-        pass
+        for index in range(list_two_length - list_one_length):
+            if compare_lists(list_one, 
+                             list_two[index:index + list_one_length], 
+                             list_one_length):
+                return SUBLIST
     else:
-        # superlist
-        pass
+        for index in range(list_one_length - list_two_length):
+            if compare_lists(list_one[index:index + list_two_length],
+                             list_two,
+                             list_two_length):
+                return SUPERLIST
 
     return UNEQUAL
