@@ -1,7 +1,7 @@
 """Calculate Darts Score"""
 
 # The Bullseye is the origin of the coordinate grid
-BULLSEYE: tuple(int, int) = (0, 0)
+BULLSEYE: tuple[int, int] = (0, 0)
 
 # Coordinates with radious <= these enumerated values counts as being
 # within the corresponding circle.  Coordiantes with radius > 10 units
