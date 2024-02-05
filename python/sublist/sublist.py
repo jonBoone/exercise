@@ -57,14 +57,13 @@ def sublist(list_one:str , list_two: str) -> int:
     compare_lists(list_one, list_two, list_one_length):
         return EQUAL
     elif list_one_length < list_two_length:
-         for index in range(list_two_length - list_one_length):
+        for index in range(list_two_length - list_one_length):
             if compare_lists(list_one, 
                              list_two[index:index + list_one_length], 
                              list_one_length):
                 return SUBLIST
     else:
-       print(f'list_one_length == {list_one_length}\tlist_two_length == {list_two_length}')
-       for index in range(list_one_length - list_two_length):
+        for index in range(list_one_length - list_two_length):
             if compare_lists(list_one[index:index + list_two_length],
                              list_two,
                              list_two_length):
