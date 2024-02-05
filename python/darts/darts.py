@@ -1,5 +1,7 @@
 """Calculate Darts Score"""
 
+import math
+
 # The Bullseye is the origin of the coordinate grid
 BULLSEYE: tuple[int, int] = (0, 0)
 
@@ -27,4 +29,13 @@ def score(x: int, y: int) -> int:
     :return: the number of points for landing at the coordinates
     :rtype: int
     """
-    pass
+    distance = math.sqrt(pow(x,2) + pow(y,2))
+
+    if distance <= INNERCIRCLE:
+        return INNERCIRCLESCORE
+    elif distance <= MIDDLECIRCLE:
+        return MIDDLECIRCLESCORE
+    elif distance <= OUTERCIRCLE:
+        return OUTERCIRCLESCORE
+    
+    return MISSEDTARGETCOMPLETELY
