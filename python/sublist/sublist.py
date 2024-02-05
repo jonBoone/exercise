@@ -20,6 +20,18 @@ UNEQUAL: int = 3
 
 def compare_lists(list_one: str, list_two: str, 
                   comparison_length: int) -> bool:
+    """Given two lists, determine if they are identical across a given
+    number of elements
+
+    :param list_one: the first list to compare
+    :type list_one: str
+    :param list_two: the second list to compare
+    :type list_two: str
+    :param comparison_length: the number of elements that nmust be equal
+    :type comparison_length: int
+    :return: True if the first comparison_length elements in both lists are the same, False otherwise
+    :rtype: bool
+    """
     return False
 
 def sublist(list_one:str , list_two: str) -> int:
