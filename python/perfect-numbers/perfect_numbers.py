@@ -1,5 +1,6 @@
 """Classify numbers according to it's aliquot sum."""
 
+import math
 
 def aliquot_sum(number: int) -> int:
     """Calculate the aliquot sum of the given number.
@@ -10,13 +11,17 @@ def aliquot_sum(number: int) -> int:
     :rtype: int
     """
 
-    working_sum: int = 0
+    factors = set()
 
-    for i in range(1, number):
-        if number % i == 0:
-            working_sum += i
+    for item in range(1, int(math.sqrt(number))+ 1):
+        if number % item != 0:
+            continue
+        factors.add(item)
+        factors.add(number // item)
 
-    return working_sum
+    factors.remove(number)
+    aliquot: int = sum(factors)
+    return aliquot
 
 
 def classify(number: int) -> str:
