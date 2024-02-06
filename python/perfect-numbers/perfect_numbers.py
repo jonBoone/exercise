@@ -13,7 +13,7 @@ def aliquot_sum(number: int) -> int:
 
     factors = set()
 
-    for item in range(1, int(math.sqrt(number))+ 1):
+    for item in range(1, math.isqrt(number)+ 1):
         if number % item != 0:
             continue
         factors.add(item)
