@@ -9,7 +9,15 @@ def aliquot_sum(number: int) -> int:
     :return: the sum of all factors of the number excluding itself
     :rtype: int
     """
-    pass
+
+    working_sum = 0
+
+    for i in range(1, number):
+        if number % i == 0:
+            working_sum += i
+
+        return working_sum
+
 
 def classify(number: int) -> str:
     """ A perfect number equals the sum of its positive divisors.
@@ -21,6 +29,7 @@ def classify(number: int) -> str:
     """
 
     aliquot: int = aliquot_sum(number)
+
     if aliquot < number:
         return 'deficient'
 
