@@ -10,13 +10,13 @@ def aliquot_sum(number: int) -> int:
     :rtype: int
     """
 
-    working_sum = 0
+    working_sum: int = 0
 
     for i in range(1, number):
         if number % i == 0:
             working_sum += i
 
-        return working_sum
+    return working_sum
 
 
 def classify(number: int) -> str:
