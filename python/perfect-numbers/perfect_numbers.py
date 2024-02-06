@@ -28,6 +28,9 @@ def classify(number: int) -> str:
     :rtype: str
     """
 
+    if not (type(number) == int and number > 0):
+        raise ValueError('Classification is only possible for positive integers.')
+
     aliquot: int = aliquot_sum(number)
 
     if aliquot < number:
